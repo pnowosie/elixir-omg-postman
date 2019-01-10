@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "7dd0d3b7-72d6-4dc6-87dc-96ee59aa48de",
+		"name": "Watcher API",
+		"description": "Making Watcher API calls less painfull",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/status.get",
+					"protocol": "http",
+					"host": [
+						"{{WAPI_HOST}}"
+					],
+					"port": "{{WAPI_PORT}}",
+					"path": [
+						"status.get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction - All",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"limit\": 3,\n\t\"address\": \"0x5a4f3601ec300f711346751274f8a68852052762\",\n\t\"block\": 3000\n}"
+				},
+				"url": {
+					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/transaction.all",
+					"protocol": "http",
+					"host": [
+						"{{WAPI_HOST}}"
+					],
+					"port": "{{WAPI_PORT}}",
+					"path": [
+						"transaction.all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction - Get",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"A340A8FBCCE827E51F339DF7BDF0AD1BC44434DAF2195281A3EE29E36809A9EA\"\n}"
+				},
+				"url": {
+					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/transaction.get",
+					"protocol": "http",
+					"host": [
+						"{{WAPI_HOST}}"
+					],
+					"port": "{{WAPI_PORT}}",
+					"path": [
+						"transaction.get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account - Get Ballance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\": \"0x50e901b98fe3389e32d56166a13a88208b03ea75\"\n}"
+				},
+				"url": {
+					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/account.get_balance",
+					"protocol": "http",
+					"host": [
+						"{{WAPI_HOST}}"
+					],
+					"port": "{{WAPI_PORT}}",
+					"path": [
+						"account.get_balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account - Get Transactions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"limit\": 5,\n\t\"address\": \"0x50e901b98fe3389e32d56166a13a88208b03ea75\"\n}"
+				},
+				"url": {
+					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/account.get_transactions",
+					"protocol": "http",
+					"host": [
+						"{{WAPI_HOST}}"
+					],
+					"port": "{{WAPI_PORT}}",
+					"path": [
+						"account.get_transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account - Get Utxos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\": \"0x50e901b98fe3389e32d56166a13a88208b03ea75\"\n}"
+				},
+				"url": {
+					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/account.get_utxos",
+					"protocol": "http",
+					"host": [
+						"{{WAPI_HOST}}"
+					],
+					"port": "{{WAPI_PORT}}",
+					"path": [
+						"account.get_utxos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account - Get Utxo Exit Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"utxo_pos\": 2000042560000\n}"
+				},
+				"url": {
+					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/utxo.get_exit_data",
+					"protocol": "http",
+					"host": [
+						"{{WAPI_HOST}}"
+					],
+					"port": "{{WAPI_PORT}}",
+					"path": [
+						"utxo.get_exit_data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account - Get Challenge Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"utxo_pos\": 2000013310000\n}"
+				},
+				"url": {
+					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/utxo.get_challenge_data",
+					"protocol": "http",
+					"host": [
+						"{{WAPI_HOST}}"
+					],
+					"port": "{{WAPI_PORT}}",
+					"path": [
+						"utxo.get_challenge_data"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "fb45555c-638e-4faa-94b5-d6ee69aa37ad",
+			"key": "WAPI_HOST",
+			"value": "localhost",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "95020bb4-f628-4c2a-8c17-ac3848d34655",
+			"key": "WAPI_PORT",
+			"value": "7434",
+			"type": "string",
+			"description": ""
+		}
+	]
+}
