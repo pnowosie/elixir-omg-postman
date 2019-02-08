@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7dd0d3b7-72d6-4dc6-87dc-96ee59aa48de",
+		"_postman_id": "95efd660-a014-4111-856f-ee3ad12eb62e",
 		"name": "Watcher API",
 		"description": "Making Watcher API calls less painfull",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -16,14 +16,16 @@
 						"value": "application/json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
-					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/status.get",
+					"raw": "http://{{WAPI_URI}}/status.get",
 					"protocol": "http",
 					"host": [
-						"{{WAPI_HOST}}"
+						"{{WAPI_URI}}"
 					],
-					"port": "{{WAPI_PORT}}",
 					"path": [
 						"status.get"
 					]
@@ -46,12 +48,11 @@
 					"raw": "{\n\t\"limit\": 3,\n\t\"address\": \"0x5a4f3601ec300f711346751274f8a68852052762\",\n\t\"block\": 3000\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/transaction.all",
+					"raw": "http://{{WAPI_URI}}/transaction.all",
 					"protocol": "http",
 					"host": [
-						"{{WAPI_HOST}}"
+						"{{WAPI_URI}}"
 					],
-					"port": "{{WAPI_PORT}}",
 					"path": [
 						"transaction.all"
 					]
@@ -74,12 +75,11 @@
 					"raw": "{\n\t\"id\": \"A340A8FBCCE827E51F339DF7BDF0AD1BC44434DAF2195281A3EE29E36809A9EA\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/transaction.get",
+					"raw": "http://{{WAPI_URI}}/transaction.get",
 					"protocol": "http",
 					"host": [
-						"{{WAPI_HOST}}"
+						"{{WAPI_URI}}"
 					],
-					"port": "{{WAPI_PORT}}",
 					"path": [
 						"transaction.get"
 					]
@@ -102,12 +102,11 @@
 					"raw": "{\n\t\"address\": \"0x50e901b98fe3389e32d56166a13a88208b03ea75\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/account.get_balance",
+					"raw": "http://{{WAPI_URI}}/account.get_balance",
 					"protocol": "http",
 					"host": [
-						"{{WAPI_HOST}}"
+						"{{WAPI_URI}}"
 					],
-					"port": "{{WAPI_PORT}}",
 					"path": [
 						"account.get_balance"
 					]
@@ -130,12 +129,11 @@
 					"raw": "{\n\t\"limit\": 5,\n\t\"address\": \"0x50e901b98fe3389e32d56166a13a88208b03ea75\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/account.get_transactions",
+					"raw": "http://{{WAPI_URI}}/account.get_transactions",
 					"protocol": "http",
 					"host": [
-						"{{WAPI_HOST}}"
+						"{{WAPI_URI}}"
 					],
-					"port": "{{WAPI_PORT}}",
 					"path": [
 						"account.get_transactions"
 					]
@@ -158,12 +156,11 @@
 					"raw": "{\n\t\"address\": \"0x50e901b98fe3389e32d56166a13a88208b03ea75\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/account.get_utxos",
+					"raw": "http://{{WAPI_URI}}/account.get_utxos",
 					"protocol": "http",
 					"host": [
-						"{{WAPI_HOST}}"
+						"{{WAPI_URI}}"
 					],
-					"port": "{{WAPI_PORT}}",
 					"path": [
 						"account.get_utxos"
 					]
@@ -186,12 +183,11 @@
 					"raw": "{\n\t\"utxo_pos\": 2000042560000\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/utxo.get_exit_data",
+					"raw": "http://{{WAPI_URI}}/utxo.get_exit_data",
 					"protocol": "http",
 					"host": [
-						"{{WAPI_HOST}}"
+						"{{WAPI_URI}}"
 					],
-					"port": "{{WAPI_PORT}}",
 					"path": [
 						"utxo.get_exit_data"
 					]
@@ -214,12 +210,11 @@
 					"raw": "{\n\t\"utxo_pos\": 2000013310000\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_HOST}}:{{WAPI_PORT}}/utxo.get_challenge_data",
+					"raw": "http://{{WAPI_URI}}/utxo.get_challenge_data",
 					"protocol": "http",
 					"host": [
-						"{{WAPI_HOST}}"
+						"{{WAPI_URI}}"
 					],
-					"port": "{{WAPI_PORT}}",
 					"path": [
 						"utxo.get_challenge_data"
 					]
@@ -228,18 +223,33 @@
 			"response": []
 		}
 	],
-	"variable": [
+	"event": [
 		{
-			"id": "fb45555c-638e-4faa-94b5-d6ee69aa37ad",
-			"key": "WAPI_HOST",
-			"value": "localhost",
-			"type": "string",
-			"description": ""
+			"listen": "prerequest",
+			"script": {
+				"id": "624450de-cf56-4360-84c9-ddf0199db918",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		},
 		{
-			"id": "95020bb4-f628-4c2a-8c17-ac3848d34655",
-			"key": "WAPI_PORT",
-			"value": "7434",
+			"listen": "test",
+			"script": {
+				"id": "c47c8f46-4744-4ebb-8ee5-596363e0a224",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "9138b5b7-6031-4650-b9c3-46773ee47c09",
+			"key": "WAPI_URI",
+			"value": "localhost:7434",
 			"type": "string",
 			"description": ""
 		}

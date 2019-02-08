@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "9df3ece2-400d-42cb-bc69-3d0b6a875fca",
+		"_postman_id": "3075fa8b-bad9-4b9f-97f4-651e06d66a1f",
 		"name": "Child Chain API",
 		"description": "Making CC API calls less painfull",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -21,12 +21,11 @@
 					"raw": "{\n\t\"transaction\": \"F90151F886B841C0C160D79DFF4CDE5D224826D56C623BC3FB222FC1CCE2A1A6B8CED63DB4550060E6CAC4EB2FB9A680CA6F179344746392CEE5C11480C8B35864EC6EBAAFDD791CB8410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000D4C78207D082109F80C3808080C3808080C3808080F8B2ED9450E901B98FE3389E32D56166A13A88208B03EA75940000000000000000000000000000000000000000822328EB944987F5A141D4D9D1ADDF299A8CEA3B77FE48589894000000000000000000000000000000000000000001EB94000000000000000000000000000000000000000094000000000000000000000000000000000000000080EB94000000000000000000000000000000000000000094000000000000000000000000000000000000000080\"\n}"
 				},
 				"url": {
-					"raw": "http://{{CCAPI_HOST}}:{{CCAPI_PORT}}/transaction.submit",
+					"raw": "http://{{CCAPI_URI}}/transaction.submit",
 					"protocol": "http",
 					"host": [
-						"{{CCAPI_HOST}}"
+						"{{CCAPI_URI}}"
 					],
-					"port": "{{CCAPI_PORT}}",
 					"path": [
 						"transaction.submit"
 					]
@@ -49,12 +48,11 @@
 					"raw": "{\n\t\"hash\": \"175F0F5E1580C93E87658ABC208C8978241C8E16A10D71DCF89BB8D8F092A7FC\"\n}"
 				},
 				"url": {
-					"raw": "http://{{CCAPI_HOST}}:{{CCAPI_PORT}}/block.get",
+					"raw": "http://{{CCAPI_URI}}/block.get",
 					"protocol": "http",
 					"host": [
-						"{{CCAPI_HOST}}"
+						"{{CCAPI_URI}}"
 					],
-					"port": "{{CCAPI_PORT}}",
 					"path": [
 						"block.get"
 					]
@@ -63,18 +61,33 @@
 			"response": []
 		}
 	],
-	"variable": [
+	"event": [
 		{
-			"id": "fc40fbd1-bf61-49b9-adfe-dd2dcffda2bf",
-			"key": "CCAPI_HOST",
-			"value": "localhost",
-			"type": "string",
-			"description": ""
+			"listen": "prerequest",
+			"script": {
+				"id": "dbc2115a-4e7c-44b4-b0fa-e2ff3f3276a8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		},
 		{
-			"id": "92c592d4-ea6b-4e0b-a585-e4a31b617b37",
-			"key": "CCAPI_PORT",
-			"value": "9656",
+			"listen": "test",
+			"script": {
+				"id": "267f7b20-df1f-4393-b59d-576684e1b7f3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "9288ba87-f0a3-4d9e-a19e-c86c8b7cfd65",
+			"key": "CCAPI_URI",
+			"value": "localhost:9656",
 			"type": "string",
 			"description": ""
 		}
