@@ -126,7 +126,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"transaction\": \"0xf901d2f9010cb841c5264bfd42c959cc2277d2cb6b08ef1706d3cf3db91f755dc0f7aee76a139595114ea343646c3fc434bd8a10cd80707bb41cc3a6f03489bfb1745f3068945a4b1bb8410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b8410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b8410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d0c3018080c3808080c3808080c3808080f8b0eb9475c50be3d97d7b6a9e6765039bac40c75760a3e29400000000000000000000000000000000000000000aeb9475c50be3d97d7b6a9e6765039bac40c75760a3e29400000000000000000000000000000000000000000ceb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080\"\n}"
+					"raw": "{\n\t\"transaction\": \"0xf9010ff843b84122695272dff2918ea50cc819a902d089a868dfea97bcb059c08ed0184fa923987eb49beb19b94e42c0a733fc7ca5bd18564dac9fc9ace886dc4b730fb294e6091cd3c683c382c98080c3808080c3808080c3808080f8b4ed9420b7cc21fce2d3c7896ef37f6847dee421a9e59794000000000000000000000000000000000000000082cb20ed9420b7cc21fce2d3c7896ef37f6847dee421a9e59794000000000000000000000000000000000000000082e678eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080\"\n}"
 				},
 				"url": {
 					"raw": "http://{{WAPI_URI}}/transaction.submit",
@@ -136,6 +136,33 @@
 					],
 					"path": [
 						"transaction.submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction - Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"owner\": \"0x20b7cc21fce2d3c7896ef37f6847dee421a9e597\",\n\t\"payments\": [\n\t\t{\n\t\t  \"amount\": 52000,\n\t\t  \"currency\": \"0x0000000000000000000000000000000000000000\",\n\t\t  \"owner\": \"0x20b7cc21fce2d3c7896ef37f6847dee421a9e597\"\n\t\t}\n\t],\n\t\"fee\": {\n    \t\"amount\": 0,\n    \t\"currency\": \"0x0000000000000000000000000000000000000000\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://{{WAPI_URI}}/transaction.create",
+					"protocol": "http",
+					"host": [
+						"{{WAPI_URI}}"
+					],
+					"path": [
+						"transaction.create"
 					]
 				}
 			},
@@ -153,7 +180,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"address\": \"0x50e901b98fe3389e32d56166a13a88208b03ea75\"\n}"
+					"raw": "{\n\t\"address\": \"0x20b7cc21fce2d3c7896ef37f6847dee421a9e597\"\n}"
 				},
 				"url": {
 					"raw": "http://{{WAPI_URI}}/account.get_balance",
@@ -207,7 +234,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"address\": \"0x50e901b98fe3389e32d56166a13a88208b03ea75\"\n}"
+					"raw": "{\n\t\"address\": \"0x20b7cc21fce2d3c7896ef37f6847dee421a9e597\"\n}"
 				},
 				"url": {
 					"raw": "http://{{WAPI_URI}}/account.get_utxos",
@@ -464,6 +491,33 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "http://{{WAPI_URI}}/transaction.create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"owner\": \"0x20b7cc21fce2d3c7896ef37f6847dee421a9e597\",\n\t\"payments\": [\n\t\t{\n\t\t  \"amount\": 333,\n\t\t  \"currency\": \"0x0000000000000000000000000000000000000000\",\n\t\t  \"owner\": \"0xae8ae48796090ba693af60b5ea6be3686206523b\"\n\t\t}\n\t],\n\t\"fee\": {\n    \t\"amount\": 5,\n    \t\"currency\": \"0x0000000000000000000000000000000000000000\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://{{WAPI_URI}}/transaction.create",
+					"protocol": "http",
+					"host": [
+						"{{WAPI_URI}}"
+					],
+					"path": [
+						"transaction.create"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -490,11 +544,10 @@
 	],
 	"variable": [
 		{
-			"id": "07fd4a1e-e907-499c-aa1a-f20b7bd4ac9a",
+			"id": "c01b972f-60ef-471b-8c5c-0dec1c3c2a81",
 			"key": "WAPI_URI",
 			"value": "localhost:7434",
-			"type": "string",
-			"description": ""
+			"type": "string"
 		}
 	]
 }
