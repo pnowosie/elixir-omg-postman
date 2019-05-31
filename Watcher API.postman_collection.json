@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "95efd660-a014-4111-856f-ee3ad12eb62e",
+		"_postman_id": "299bc9a4-1dea-4697-89a2-72406c821424",
 		"name": "Watcher API",
 		"description": "Making Watcher API calls less painfull",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -21,10 +21,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/status.get",
-					"protocol": "http",
+					"raw": "{{URL}}/status.get",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"status.get"
@@ -48,10 +47,9 @@
 					"raw": "{\n\t\"limit\": 3,\n\t\"address\": \"0x5a4f3601ec300f711346751274f8a68852052762\",\n\t\"block\": 3000\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/transaction.all",
-					"protocol": "http",
+					"raw": "{{URL}}/transaction.all",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"transaction.all"
@@ -72,13 +70,12 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"id\": \"A340A8FBCCE827E51F339DF7BDF0AD1BC44434DAF2195281A3EE29E36809A9EA\"\n}"
+					"raw": "{\n\t\"id\": \"0xeac2224a3750a303ec75bb8b7a945049f1c3a4776c1de8c8c5c31b675c5ac5da\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/transaction.get",
-					"protocol": "http",
+					"raw": "{{URL}}/transaction.get",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"transaction.get"
@@ -102,10 +99,9 @@
 					"raw": "{\n\t\"blknum\": 68290000,\n\t\"txindex\": 100\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/transaction.get_by_position",
-					"protocol": "http",
+					"raw": "{{URL}}/transaction.get_by_position",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"transaction.get_by_position"
@@ -129,10 +125,9 @@
 					"raw": "{\n\t\"transaction\": \"0xf9010ff843b84122695272dff2918ea50cc819a902d089a868dfea97bcb059c08ed0184fa923987eb49beb19b94e42c0a733fc7ca5bd18564dac9fc9ace886dc4b730fb294e6091cd3c683c382c98080c3808080c3808080c3808080f8b4ed9420b7cc21fce2d3c7896ef37f6847dee421a9e59794000000000000000000000000000000000000000082cb20ed9420b7cc21fce2d3c7896ef37f6847dee421a9e59794000000000000000000000000000000000000000082e678eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/transaction.submit",
-					"protocol": "http",
+					"raw": "{{URL}}/transaction.submit",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"transaction.submit"
@@ -153,13 +148,12 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"owner\": \"0x20b7cc21fce2d3c7896ef37f6847dee421a9e597\",\n\t\"payments\": [\n\t\t{\n\t\t  \"amount\": 52000,\n\t\t  \"currency\": \"0x0000000000000000000000000000000000000000\",\n\t\t  \"owner\": \"0x20b7cc21fce2d3c7896ef37f6847dee421a9e597\"\n\t\t}\n\t],\n\t\"fee\": {\n    \t\"amount\": 0,\n    \t\"currency\": \"0x0000000000000000000000000000000000000000\"\n\t}\n}"
+					"raw": "{\n\t\"owner\": \"0x9df51d88c4733c9e5a21b67b64983d958249e98a\",\n\t\"payments\": [\n\t\t{\n\t\t  \"amount\": 52000,\n\t\t  \"currency\": \"0x0000000000000000000000000000000000000000\",\n\t\t  \"owner\": \"0x20b7cc21fce2d3c7896ef37f6847dee421a9e597\"\n\t\t}\n\t],\n\t\"metadata\": \"0x00000000000000000000000000000000000000000000000000000048656c6c6f\",\n\t\"fee\": {\n    \t\"amount\": 0,\n    \t\"currency\": \"0x0000000000000000000000000000000000000000\"\n\t}\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/transaction.create",
-					"protocol": "http",
+					"raw": "{{URL}}/transaction.create",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"transaction.create"
@@ -180,13 +174,12 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"address\": \"0x20b7cc21fce2d3c7896ef37f6847dee421a9e597\"\n}"
+					"raw": "{\n\t\"address\": \"0x9df51d88c4733c9e5a21b67b64983d958249e98a\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/account.get_balance",
-					"protocol": "http",
+					"raw": "{{URL}}/account.get_balance",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"account.get_balance"
@@ -207,13 +200,12 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"limit\": 5,\n\t\"address\": \"0x50e901b98fe3389e32d56166a13a88208b03ea75\"\n}"
+					"raw": "{\n\t\"metadata\": \"0x00000000000000000000000000000000000000000000000000000048656c6c6f\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/account.get_transactions",
-					"protocol": "http",
+					"raw": "{{URL}}/account.get_transactions",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"account.get_transactions"
@@ -234,13 +226,12 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"address\": \"0x20b7cc21fce2d3c7896ef37f6847dee421a9e597\"\n}"
+					"raw": "{\n\t\"address\": \"0xf9d5ffb425fbb5c9ccc25febef74043ab51111ba\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/account.get_utxos",
-					"protocol": "http",
+					"raw": "{{URL}}/account.get_utxos",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"account.get_utxos"
@@ -250,7 +241,7 @@
 			"response": []
 		},
 		{
-			"name": "Account - Get Utxo Exit Data",
+			"name": "UTXO - Get Utxo Exit Data",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -261,13 +252,12 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"utxo_pos\": 2000042560000\n}"
+					"raw": "{\n\t\"utxo_pos\": 44000000020000\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/utxo.get_exit_data",
-					"protocol": "http",
+					"raw": "{{URL}}/utxo.get_exit_data",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"utxo.get_exit_data"
@@ -277,7 +267,7 @@
 			"response": []
 		},
 		{
-			"name": "Account - Get Challenge Data",
+			"name": "UTXO - Get Challenge Data",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -288,13 +278,12 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"utxo_pos\": 2000013310000\n}"
+					"raw": "{\n\t\"utxo_pos\": 44000000020000\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/utxo.get_challenge_data",
-					"protocol": "http",
+					"raw": "{{URL}}/utxo.get_challenge_data",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"utxo.get_challenge_data"
@@ -318,10 +307,9 @@
 					"raw": "{\n\t\"from_blknum\": 68290000,\n\t\"limit\": 100\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/block.all",
-					"protocol": "http",
+					"raw": "{{URL}}/block.all",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"block.all"
@@ -345,10 +333,9 @@
 					"raw": "{\n\t\"id\": \"0x0017372421f9a92bedb7163310918e623557ab5310befc14e67212b660c33bec\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/block.get",
-					"protocol": "http",
+					"raw": "{{URL}}/block.get",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"block.get"
@@ -369,16 +356,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"transaction\": \"0xf8d083015ba98080808080940000...\"\n}"
+					"raw": "{\n\t\"txbytes\": \"0xf90132f843b841a405cdc9c690ae4aade6f608fc1d88666f4a812ff762acb47648d060d5421ef70ab70446db1a3753158f8f7b12bd3b43e26351302df4f8389990033ee53b26971cd2c582c3508080c3808080c3808080c3808080f8b7f2949df51d88c4733c9e5a21b67b64983d958249e98a94000000000000000000000000000000000000000087470de4df82007beb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080a00000000000000000000000000000000000000000000000000000000000000000\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/inflight_exit.get_data",
-					"protocol": "http",
+					"raw": "{{URL}}/in_flight_exit.get_data",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
-						"inflight_exit.get_data"
+						"in_flight_exit.get_data"
 					]
 				}
 			},
@@ -396,16 +382,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"transaction\": \"0xf8d083015ba98080808080940000...\"\n}"
+					"raw": "{\n\t\"txbytes\": \"0xf8f5d2c58275300280c3808080c3808080c3808080f8bff29438536c67fa33da68f670d6fb5096c8e2874e012794000000000000000000000000000000000000000087470de4df82007bf394a793a384d85c8bdbf5894005d73aee5d15ea004c94000000000000000000000000000000000000000088011c37937e07ff85eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080a00000000000000000000000000000000000000000000000000000000000000000\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/inflight_exit.get_competitor",
-					"protocol": "http",
+					"raw": "{{URL}}/in_flight_exit.get_competitor",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
-						"inflight_exit.get_competitor"
+						"in_flight_exit.get_competitor"
 					]
 				}
 			},
@@ -423,16 +408,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"transaction\": \"0xf8d083015ba98080808080940000...\"\n}"
+					"raw": "{\n\t\"txbytes\": \"0xf8f5d2c58275300280c3808080c3808080c3808080f8bff29438536c67fa33da68f670d6fb5096c8e2874e012794000000000000000000000000000000000000000087470de4df82007bf394a793a384d85c8bdbf5894005d73aee5d15ea004c94000000000000000000000000000000000000000088011c37937e07ff85eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080a00000000000000000000000000000000000000000000000000000000000000000\"\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/inflight_exit.prove_canonical",
-					"protocol": "http",
+					"raw": "{{URL}}/in_flight_exit.prove_canonical",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
-						"inflight_exit.prove_canonical"
+						"in_flight_exit.prove_canonical"
 					]
 				}
 			},
@@ -450,16 +434,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"transaction\": \"0xf8d083015ba98080808080940000...\",\n\t\"input_index\": 1\n}"
+					"raw": "{\n\t\"txbytes\": \"0xf8f5d2c58275300280c3808080c3808080c3808080f8bff29438536c67fa33da68f670d6fb5096c8e2874e012794000000000000000000000000000000000000000087470de4df82007bf394a793a384d85c8bdbf5894005d73aee5d15ea004c94000000000000000000000000000000000000000088011c37937e07ff85eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080eb94000000000000000000000000000000000000000094000000000000000000000000000000000000000080a00000000000000000000000000000000000000000000000000000000000000000\",\n\t\"input_index\": 1\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/inflight_exit.get_input_challenge_data",
-					"protocol": "http",
+					"raw": "{{URL}}/in_flight_exit.get_input_challenge_data",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
-						"inflight_exit.get_input_challenge_data"
+						"in_flight_exit.get_input_challenge_data"
 					]
 				}
 			},
@@ -480,10 +463,9 @@
 					"raw": "{\n\t\"transaction\": \"0xf8d083015ba98080808080940000...\",\n\t\"output_index\": 0\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/inflight_exit.get_output_challenge_data",
-					"protocol": "http",
+					"raw": "{{URL}}/inflight_exit.get_output_challenge_data",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"inflight_exit.get_output_challenge_data"
@@ -493,7 +475,7 @@
 			"response": []
 		},
 		{
-			"name": "http://{{WAPI_URI}}/transaction.create",
+			"name": "{{URL}}/transaction.create",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -507,10 +489,9 @@
 					"raw": "{\n\t\"owner\": \"0x20b7cc21fce2d3c7896ef37f6847dee421a9e597\",\n\t\"payments\": [\n\t\t{\n\t\t  \"amount\": 333,\n\t\t  \"currency\": \"0x0000000000000000000000000000000000000000\",\n\t\t  \"owner\": \"0xae8ae48796090ba693af60b5ea6be3686206523b\"\n\t\t}\n\t],\n\t\"fee\": {\n    \t\"amount\": 5,\n    \t\"currency\": \"0x0000000000000000000000000000000000000000\"\n\t}\n}"
 				},
 				"url": {
-					"raw": "http://{{WAPI_URI}}/transaction.create",
-					"protocol": "http",
+					"raw": "{{URL}}/transaction.create",
 					"host": [
-						"{{WAPI_URI}}"
+						"{{URL}}"
 					],
 					"path": [
 						"transaction.create"
@@ -544,9 +525,9 @@
 	],
 	"variable": [
 		{
-			"id": "c01b972f-60ef-471b-8c5c-0dec1c3c2a81",
-			"key": "WAPI_URI",
-			"value": "localhost:7434",
+			"id": "a83096d8-656a-4ddc-861a-879a9afb9118",
+			"key": "URL",
+			"value": "http://localhost:7434",
 			"type": "string"
 		}
 	]
